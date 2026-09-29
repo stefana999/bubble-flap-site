@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bubble Flap — keep flying, pop bubbles</title>
+  <meta name="description" content="Bubble Flap is a one-tap flying game for iPhone and iPad. Pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.">
+  <link rel="canonical" href="https://bubbleflap.mothlark.com/">
+  <meta name="theme-color" content="#bfe4ff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1834" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bubble Flap">
+  <meta property="og:title" content="Bubble Flap — keep flying, pop bubbles">
+  <meta property="og:description" content="A one-tap flying game for iPhone and iPad. Pop bubbles, break free, dodge the wires.">
+  <meta property="og:url" content="https://bubbleflap.mothlark.com/">
+  <meta property="og:image" content="https://bubbleflap.mothlark.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- LAUNCH: once the app is live, uncomment and put in the numeric App Store ID
+       to show Safari's "Open in App Store" banner on iPhone/iPad. -->
+  <!-- <meta name="apple-itunes-app" content="app-id=0000000000"> -->
+
+  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Bubble Flap",
+    "url": "https://bubbleflap.mothlark.com/",
+    "description": "A one-tap flying game: pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.",
+    "gamePlatform": ["iPhone", "iPad"],
+    "operatingSystem": "iOS, iPadOS",
+    "genre": ["Arcade", "Casual"],
+    "publisher": { "@type": "Organization", "name": "Mothlark", "url": "https://mothlark.com/" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Shared SVG sprite: bird and bubble art used across the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="bfill" cx="50%" cy="50%" r="50%">
+        <stop offset="55%" stop-color="#ffffff" stop-opacity="0.04"/>
+        <stop offset="90%" stop-color="#cdeeff" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0.65"/>
+      </radialGradient>
+      <linearGradient id="bedge" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#7fd8ff"/>
+        <stop offset="0.5" stop-color="#ff9fd9"/>
+        <stop offset="1" stop-color="#b9a4ff"/>
+      </linearGradient>
+      <symbol id="bubble" viewBox="-50 -50 100 100">
+        <circle r="46" fill="url(#bfill)" stroke="url(#bedge)" stroke-width="2.5"/>
+        <ellipse cx="-18" cy="-21" rx="12" ry="6.5" transform="rotate(-35 -18 -21)" fill="#ffffff" opacity="0.9"/>
+        <circle cx="21" cy="24" r="3.2" fill="#ffffff" opacity="0.7"/>
+      </symbol>
+      <symbol id="bird" viewBox="0 0 120 100">
+        <path d="M24 54 L4 40 L9 58 L1 72 L26 63 Z" style="fill:var(--bird-wing)"/>
+        <ellipse cx="60" cy="56" rx="38" ry="32" style="fill:var(--bird-body)"/>
+        <ellipse cx="67" cy="67" rx="24" ry="16" style="fill:var(--bird-belly)"/>
+        <path d="M50 27 C48 14 56 7 60 4 C59 12 62 18 64 24 C66 14 74 10 79 10 C73 18 71 24 69 29 Z" style="fill:var(--bird-wing)"/>
+        <path class="wing" d="M30 58 C24 46 34 38 48 42 C58 45 62 54 56 62 C48 70 36 68 30 58 Z" style="fill:var(--bird-wing)" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+        <circle cx="79" cy="46" r="7" fill="#1f2a44"/>
+        <circle cx="81.6" cy="43.4" r="2.4" fill="#ffffff"/>
+        <circle cx="77" cy="59" r="5" fill="#ff8f7f" opacity="0.55"/>
+        <path d="M95 50 L114 56 L95 62 Z" style="fill:var(--bird-beak)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Bubble Flap home">
+        <svg viewBox="0 0 120 100" aria-hidden="true"><use href="#bird"/></svg>
+        Bubble Flap
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how" class="hide-sm">How to play</a>
+        <a href="#features" class="hide-sm">Features</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title" style="padding-bottom:0">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">A one-tap flying game</span>
+          <h1 id="hero-title">Keep flying.<br><span class="pop">Pop bubbles.</span></h1>
+          <p class="lead">You're a little bird who can't stop flapping. Burst soap bubbles for energy, break free of the ones that trap you, and steer clear of the live wires.</p>
+          <div class="cta-row">
+            <!-- LAUNCH: replace this placeholder with Apple's official
+                 "Download on the App Store" badge (developer.apple.com/app-store/marketing/guidelines)
+                 linking to https://apps.apple.com/app/id0000000000 -->
+            <a class="btn btn-primary" id="appstore" aria-disabled="true" role="link">
+              <span class="stack"><small>Coming soon to the</small>App Store</span>
+            </a>
+            <a class="btn btn-ghost" href="#how">How to play</a>
+          </div>
+          <p class="platforms">For iPhone and iPad · Plays in landscape</p>
+        </div>
+
+        <div class="hero-art">
+          <svg class="scene" viewBox="0 0 600 440" role="img" aria-label="A small orange bird flying among floating soap bubbles in a morning sky">
+            <circle cx="120" cy="90" r="54" style="fill:var(--sun)" opacity="0.85"/>
+            <g class="float d1"><use href="#bubble" x="340" y="10" width="210" height="210"/></g>
+            <g class="float d1">
+              <svg x="395" y="72" width="110" height="92" viewBox="0 0 120 100"><use href="#bird"/></svg>
+            </g>
+            <g class="float d2"><use href="#bubble" x="200" y="40" width="70" height="70"/></g>
+            <g class="float d3"><use href="#bubble" x="470" y="250" width="110" height="110"/></g>
+            <g class="float"><use href="#bubble" x="20" y="250" width="72" height="72"/></g>
+            <g class="float d2"><use href="#bubble" x="360" y="330" width="52" height="52"/></g>
+            <g class="float d3"><use href="#bubble" x="290" y="150" width="36" height="36"/></g>
+            <!-- pop burst -->
+            <g transform="translate(110 205)" stroke="#ff9fd9" stroke-width="4" stroke-linecap="round">
+              <line x1="0" y1="-34" x2="0" y2="-20"/>
+              <line x1="30" y1="-17" x2="17" y2="-10"/>
+              <line x1="30" y1="17" x2="17" y2="10"/>
+              <line x1="0" y1="34" x2="0" y2="20"/>
+              <line x1="-30" y1="17" x2="-17" y2="10"/>
+              <line x1="-30" y1="-17" x2="-17" y2="-10"/>
+            </g>
+            <text x="110" y="212" text-anchor="middle" font-family="ui-rounded, system-ui, sans-serif" font-weight="800" font-size="22" style="fill:var(--accent)">+5</text>
+            <!-- main bird -->
+            <g class="bird">
+              <svg x="150" y="190" width="230" height="192" viewBox="0 0 120 100"><use href="#bird"/></svg>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Suburban skyline with poles and wires -->
+      <svg class="ground" viewBox="0 0 1200 190" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="width:100%;height:190px">
+        <path d="M0 120 C150 80 300 90 450 110 C620 132 780 80 950 95 C1060 104 1140 96 1200 90 L1200 190 L0 190 Z" style="fill:var(--hill-far)"/>
+        <g>
+          <g transform="translate(70 104)"><rect width="70" height="50" style="fill:var(--house)"/><path d="M-8 2 L35 -30 L78 2 Z" style="fill:var(--roof)"/><rect x="12" y="14" width="16" height="14" rx="2" fill="#9fd3ff"/><rect x="42" y="22" width="16" height="28" rx="2" style="fill:var(--roof)"/></g>
+          <g transform="translate(300 112)"><rect width="90" height="44" style="fill:var(--house)"/><path d="M-8 2 L45 -26 L98 2 Z" style="fill:var(--roof)"/><rect x="14" y="12" width="18" height="14" rx="2" fill="#9fd3ff"/><rect x="58" y="12" width="18" height="14" rx="2" fill="#9fd3ff"/></g>
+          <g transform="translate(560 100)"><rect width="64" height="56" style="fill:var(--house)"/><path d="M-8 2 L32 -32 L72 2 Z" style="fill:var(--roof)"/><rect x="22" y="26" width="18" height="30" rx="2" style="fill:var(--roof)"/></g>
+          <g transform="translate(820 108)"><rect width="84" height="48" style="fill:var(--house)"/><path d="M-8 2 L42 -28 L92 2 Z" style="fill:var(--roof)"/><rect x="12" y="14" width="18" height="14" rx="2" fill="#9fd3ff"/><rect x="50" y="20" width="16" height="28" rx="2" style="fill:var(--roof)"/></g>
+          <g transform="translate(1060 104)"><rect width="70" height="52" style="fill:var(--house)"/><path d="M-8 2 L35 -30 L78 2 Z" style="fill:var(--roof)"/><rect x="26" y="14" width="18" height="14" rx="2" fill="#9fd3ff"/></g>
+        </g>
+        <path d="M0 160 C200 140 380 150 600 156 C820 162 1000 142 1200 148 L1200 190 L0 190 Z" style="fill:var(--hill-near)"/>
+        <!-- poles -->
+        <g style="fill:var(--pole)">
+          <rect x="196" y="36" width="8" height="130"/><rect x="176" y="40" width="48" height="6" rx="3"/>
+          <rect x="596" y="36" width="8" height="130"/><rect x="576" y="40" width="48" height="6" rx="3"/>
+          <rect x="996" y="36" width="8" height="130"/><rect x="976" y="40" width="48" height="6" rx="3"/>
+        </g>
+        <!-- wires -->
+        <g fill="none" stroke-width="2.5" style="stroke:var(--wire)">
+          <path d="M-200 43 Q0 78 180 43"/><path d="M-180 43 Q20 84 220 43"/>
+          <path d="M180 43 Q390 80 580 43"/><path d="M220 43 Q410 86 620 43"/>
+          <path d="M580 43 Q790 80 980 43"/><path d="M620 43 Q810 86 1020 43"/>
+          <path d="M980 43 Q1190 80 1380 43"/><path d="M1020 43 Q1210 86 1420 43"/>
+        </g>
+        <!-- live wire spark -->
+        <g class="spark" transform="translate(790 62)">
+          <path d="M0 -16 L5 -4 L16 -6 L7 3 L12 15 L0 7 L-12 15 L-7 3 L-16 -6 L-5 -4 Z" style="fill:var(--spark)"/>
+        </g>
+      </svg>
+    </section>
+
+    <!-- ================= HOW TO PLAY ================= -->
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">How to play</h2>
+          <p>One finger, four rules. Easy to pick up — and you'll keep coming back for one more flight.</p>
+        </div>
+        <div class="steps">
+          <article class="card step">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+              <g stroke="#9aa6c2" stroke-width="3" stroke-linecap="round"><line x1="4" y1="24" x2="14" y2="24"/><line x1="2" y1="34" x2="12" y2="34"/><line x1="6" y1="44" x2="14" y2="44"/></g>
+              <svg x="12" y="10" width="52" height="44" viewBox="0 0 120 100"><use href="#bird"/></svg>
+            </svg>
+            <h3>Tap to flap</h3>
+            <p>Every tap gives you lift. Stop tapping and gravity wins.</p>
+          </article>
+          <article class="card step">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+              <use href="#bubble" x="8" y="8" width="48" height="48"/>
+              <path d="M34 18 L24 34 L32 34 L28 48 L40 29 L32 29 Z" fill="#ffd23f" stroke="#e0a800" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <h3>Pop for energy</h3>
+            <p>Flapping burns energy. Burst bubbles to fill it back up.</p>
+          </article>
+          <article class="card step">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+              <use href="#bubble" x="2" y="2" width="60" height="60"/>
+              <svg x="16" y="20" width="32" height="27" viewBox="0 0 120 100"><use href="#bird"/></svg>
+            </svg>
+            <h3>Break free</h3>
+            <p>Some bubbles pull you in. Tap fast to pop them from inside — the longer you dare to stay, the bigger the reward.</p>
+          </article>
+          <article class="card step">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="8" y="10" width="5" height="50" style="fill:var(--pole)"/><rect x="2" y="12" width="17" height="4" rx="2" style="fill:var(--pole)"/>
+              <path d="M10 14 Q36 34 64 16" fill="none" stroke-width="2.5" style="stroke:var(--wire)"/>
+              <path d="M38 14 L41 21 L48 20 L43 26 L46 33 L38 28 L30 33 L33 26 L28 20 L35 21 Z" fill="#ffd23f"/>
+            </svg>
+            <h3>Mind the wires</h3>
+            <p>Poles are fine to fly past. Live, sparking wires are not.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="band" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="features-title">Small game, big sky</h2>
+        </div>
+        <div class="features">
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>One-tap controls</h3><p>Tap to flap — that's the whole control scheme. Easy to learn, hard to master.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Risk-and-reward bubbles</h3><p>Stay trapped a little longer for a bigger payout, if you can tap your way out in time.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>A sunny suburb</h3><p>Fly over rooftops, gardens and power lines in a bright neighbourhood sky.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Game Center leaderboards</h3><p>Chase your friends' best flights and climb the rankings.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Made for iPhone and iPad</h3><p>Plays in landscape and fits every screen size.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>No accounts, no tracking</h3><p>We don't collect your data. Your best score stays on your device.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SCREENSHOTS ================= -->
+    <section id="screens" aria-labelledby="screens-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="screens-title">Take a look</h2>
+        </div>
+        <!-- LAUNCH: drop landscape screenshots in /assets/img/ and replace each
+             placeholder span with <img src="/assets/img/shot-1.png" alt="…"> -->
+        <div class="shots">
+          <figure style="margin:0">
+            <div class="device"><div class="screen"><span>Screenshot coming soon</span></div></div>
+            <figcaption class="shot-caption">Pop bubbles to refill your energy</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div class="device"><div class="screen"><span>Screenshot coming soon</span></div></div>
+            <figcaption class="shot-caption">Burst out of a trapping bubble</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div class="device"><div class="screen"><span>Screenshot coming soon</span></div></div>
+            <figcaption class="shot-caption">Dodge the live wires</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap">
+        <svg viewBox="0 0 120 100" width="96" height="80" aria-hidden="true" style="margin:0 auto 12px" class="bird"><use href="#bird"/></svg>
+        <h2 id="final-title">Ready to take off?</h2>
+        <p class="lead center">Bubble Flap is landing on iPhone and iPad soon.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" aria-disabled="true" role="link"><span class="stack"><small>Coming soon to the</small>App Store</span></a>
+          <a class="btn btn-ghost" href="/support/">Questions? Get support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Mothlark</span>
+      <nav aria-label="Footer">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy policy</a>
+        <a href="mailto:support@mothlark.com">support@mothlark.com</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
