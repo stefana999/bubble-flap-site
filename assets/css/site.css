@@ -1,4 +1,4 @@
-/* Bubble Flap — site styles
+/* Bubble Dare — site styles
    No web fonts or third-party requests: the rounded system font is used on Apple devices. */
 
 :root {
@@ -14,10 +14,10 @@
   --wire: #3b3f52;
   --spark: #ffd23f;
 
-  --bird-body: #f2a541;
-  --bird-wing: #d9822b;
-  --bird-belly: #fff3dc;
-  --bird-beak: #ff7a45;
+  --bird-body: #9ccf5a;
+  --bird-wing: #6fa83a;
+  --bird-belly: #f2fbdc;
+  --bird-beak: #f07a6a;
 
   --bubble-a: #7fd8ff;
   --bubble-b: #ff9fd9;

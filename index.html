@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Bubble Flap — keep flying, pop bubbles</title>
-  <meta name="description" content="Bubble Flap is a one-tap flying game for iPhone and iPad. Pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.">
-  <link rel="canonical" href="https://bubbleflap.mothlark.com/">
+  <title>Bubble Dare — pop bubbles, dare the swirl</title>
+  <meta name="description" content="Bubble Dare is a one-tap flying game for iPhone and iPad. Pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.">
+  <link rel="canonical" href="https://bubbledare.mothlark.com/">
   <meta name="theme-color" content="#bfe4ff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0e1834" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Bubble Flap">
-  <meta property="og:title" content="Bubble Flap — keep flying, pop bubbles">
+  <meta property="og:site_name" content="Bubble Dare">
+  <meta property="og:title" content="Bubble Dare — pop bubbles, dare the swirl">
   <meta property="og:description" content="A one-tap flying game for iPhone and iPad. Pop bubbles, break free, dodge the wires.">
-  <meta property="og:url" content="https://bubbleflap.mothlark.com/">
-  <meta property="og:image" content="https://bubbleflap.mothlark.com/assets/img/og-image.png">
+  <meta property="og:url" content="https://bubbledare.mothlark.com/">
+  <meta property="og:image" content="https://bubbledare.mothlark.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -32,8 +32,8 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
-    "name": "Bubble Flap",
-    "url": "https://bubbleflap.mothlark.com/",
+    "name": "Bubble Dare",
+    "url": "https://bubbledare.mothlark.com/",
     "description": "A one-tap flying game: pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.",
     "gamePlatform": ["iPhone", "iPad"],
     "operatingSystem": "iOS, iPadOS",
@@ -64,24 +64,26 @@
         <circle cx="21" cy="24" r="3.2" fill="#ffffff" opacity="0.7"/>
       </symbol>
       <symbol id="bird" viewBox="0 0 120 100">
-        <path d="M24 54 L4 40 L9 58 L1 72 L26 63 Z" style="fill:var(--bird-wing)"/>
-        <ellipse cx="60" cy="56" rx="38" ry="32" style="fill:var(--bird-body)"/>
-        <ellipse cx="67" cy="67" rx="24" ry="16" style="fill:var(--bird-belly)"/>
-        <path d="M50 27 C48 14 56 7 60 4 C59 12 62 18 64 24 C66 14 74 10 79 10 C73 18 71 24 69 29 Z" style="fill:var(--bird-wing)"/>
-        <path class="wing" d="M30 58 C24 46 34 38 48 42 C58 45 62 54 56 62 C48 70 36 68 30 58 Z" style="fill:var(--bird-wing)" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
-        <circle cx="79" cy="46" r="7" fill="#1f2a44"/>
-        <circle cx="81.6" cy="43.4" r="2.4" fill="#ffffff"/>
-        <circle cx="77" cy="59" r="5" fill="#ff8f7f" opacity="0.55"/>
-        <path d="M95 50 L114 56 L95 62 Z" style="fill:var(--bird-beak)"/>
+        <!-- the game's bird (icons/icon-source.svg in the game repo), default plumage "Kiwi" -->
+        <g transform="translate(56.7 54.8) scale(0.217)">
+          <ellipse cx="0" cy="0" rx="196" ry="172" style="fill:var(--bird-body)"/>
+          <ellipse cx="34" cy="70" rx="112" ry="76" style="fill:var(--bird-belly)"/>
+          <path class="wing" style="fill:var(--bird-wing);transform-origin:85% 95%" d="M-150 -30 Q-250 -170 -120 -196 Q-40 -108 -60 12 Z"/>
+          <circle cx="62" cy="-56" r="54" fill="#ffffff"/>
+          <circle cx="82" cy="-56" r="27" fill="#2b2f4a"/>
+          <circle cx="120" cy="30" r="24" fill="#ff9eb1" fill-opacity="0.75"/>
+          <path d="M168 -22 L282 10 L168 46 Z" style="fill:var(--bird-beak)"/>
+          <path d="M-46 -150 Q-8 -214 46 -166" fill="none" style="stroke:var(--bird-wing)" stroke-width="26" stroke-linecap="round"/>
+        </g>
       </symbol>
     </defs>
   </svg>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Bubble Flap home">
+      <a class="brand" href="/" aria-label="Bubble Dare home">
         <svg viewBox="0 0 120 100" aria-hidden="true"><use href="#bird"/></svg>
-        Bubble Flap
+        Bubble Dare
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#how" class="hide-sm">How to play</a>
@@ -98,7 +100,7 @@
         <div>
           <span class="eyebrow">A one-tap flying game</span>
           <h1 id="hero-title">Keep flying.<br><span class="pop">Pop bubbles.</span></h1>
-          <p class="lead">You're a little bird who can't stop flapping. Burst soap bubbles for energy, break free of the ones that trap you, and steer clear of the live wires.</p>
+          <p class="lead">You're a little bird out over the suburb. Burst soap bubbles for energy, break free of the ones that trap you, and steer clear of the live wires.</p>
           <div class="cta-row">
             <!-- LAUNCH: replace this placeholder with Apple's official
                  "Download on the App Store" badge (developer.apple.com/app-store/marketing/guidelines)
@@ -112,7 +114,7 @@
         </div>
 
         <div class="hero-art">
-          <svg class="scene" viewBox="0 0 600 440" role="img" aria-label="A small orange bird flying among floating soap bubbles in a morning sky">
+          <svg class="scene" viewBox="0 0 600 440" role="img" aria-label="A small green bird flying among floating soap bubbles in a morning sky">
             <circle cx="120" cy="90" r="54" style="fill:var(--sun)" opacity="0.85"/>
             <g class="float d1"><use href="#bubble" x="340" y="10" width="210" height="210"/></g>
             <g class="float d1">
@@ -185,7 +187,7 @@
               <g stroke="#9aa6c2" stroke-width="3" stroke-linecap="round"><line x1="4" y1="24" x2="14" y2="24"/><line x1="2" y1="34" x2="12" y2="34"/><line x1="6" y1="44" x2="14" y2="44"/></g>
               <svg x="12" y="10" width="52" height="44" viewBox="0 0 120 100"><use href="#bird"/></svg>
             </svg>
-            <h3>Tap to flap</h3>
+            <h3>Tap to fly</h3>
             <p>Every tap gives you lift. Stop tapping and gravity wins.</p>
           </article>
           <article class="card step">
@@ -194,7 +196,7 @@
               <path d="M34 18 L24 34 L32 34 L28 48 L40 29 L32 29 Z" fill="#ffd23f" stroke="#e0a800" stroke-width="1.5" stroke-linejoin="round"/>
             </svg>
             <h3>Pop for energy</h3>
-            <p>Flapping burns energy. Burst bubbles to fill it back up.</p>
+            <p>Every tap burns energy. Burst bubbles to fill it back up.</p>
           </article>
           <article class="card step">
             <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -224,7 +226,7 @@
           <h2 id="features-title">Small game, big sky</h2>
         </div>
         <div class="features">
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>One-tap controls</h3><p>Tap to flap — that's the whole control scheme. Easy to learn, hard to master.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>One-tap controls</h3><p>Tap to fly — that's the whole control scheme. Easy to learn, hard to master.</p></div></div>
           <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Risk-and-reward bubbles</h3><p>Stay trapped a little longer for a bigger payout, if you can tap your way out in time.</p></div></div>
           <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>A sunny suburb</h3><p>Fly over rooftops, gardens and power lines in a bright neighbourhood sky.</p></div></div>
           <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Game Center leaderboards</h3><p>Chase your friends' best flights and climb the rankings.</p></div></div>
@@ -264,7 +266,7 @@
       <div class="wrap">
         <svg viewBox="0 0 120 100" width="96" height="80" aria-hidden="true" style="margin:0 auto 12px" class="bird"><use href="#bird"/></svg>
         <h2 id="final-title">Ready to take off?</h2>
-        <p class="lead center">Bubble Flap is landing on iPhone and iPad soon.</p>
+        <p class="lead center">Bubble Dare is landing on iPhone and iPad soon.</p>
         <div class="cta-row">
           <a class="btn btn-primary" aria-disabled="true" role="link"><span class="stack"><small>Coming soon to the</small>App Store</span></a>
           <a class="btn btn-ghost" href="/support/">Questions? Get support</a>
