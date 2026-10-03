@@ -1,6 +1,12 @@
-# bubbleflap.mothlark.com
+# bubbledare.mothlark.com
 
-Static website for **Bubble Flap**, served by GitHub Pages from `main` / root.
+Static website for **Bubble Dare**, served by GitHub Pages from `main` / root.
+
+The game was called Bubble Flap until October 2026, when App Review rejected it under
+guideline 4.1(a) (Copycats) for reading as Flappy Bird. The site moved from
+bubbleflap.mothlark.com to bubbledare.mothlark.com at the same time. Keep "Flap",
+"Flappy" and other games' names out of the copy, and the bird green (the game's default, Kiwi).
+
 Plain HTML and CSS: no build step, no JavaScript, no web fonts, no cookies, and nothing loaded from third parties.
 
 ```
@@ -20,9 +26,9 @@ Preview locally: `python3 -m http.server 8000`, then open http://localhost:8000
 
 | Field | URL |
 |---|---|
-| Marketing URL | https://bubbleflap.mothlark.com/ |
-| Support URL | https://bubbleflap.mothlark.com/support/ |
-| Privacy Policy URL | https://bubbleflap.mothlark.com/privacy/ |
+| Marketing URL | https://bubbledare.mothlark.com/ |
+| Support URL | https://bubbledare.mothlark.com/support/ |
+| Privacy Policy URL | https://bubbledare.mothlark.com/privacy/ |
 
 ## Launch checklist
 
