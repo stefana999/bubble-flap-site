@@ -16,7 +16,7 @@ Plain HTML and CSS: no build step, no JavaScript, no web fonts, no cookies, and 
 /404.html                         GitHub Pages "not found" page
 /app-ads.txt                      authorised ad sellers (AdMob); Marketing URL must be this site
 /assets/css/site.css              all styles (light and dark mode)
-/assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png
+/assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png, shot-*.webp
 CNAME, .nojekyll, robots.txt, sitemap.xml
 ```
 
@@ -39,7 +39,7 @@ Every spot to change is marked with a `LAUNCH:` comment in the HTML.
       "Download on the App Store" badge from https://developer.apple.com/app-store/marketing/guidelines/,
       saved under `assets/img/` (nothing is loaded from third parties).
 - [x] **Smart App Banner**: `<meta name="apple-itunes-app" content="app-id=6816718972">` in `index.html`.
-- [ ] **Screenshots**: put three landscape screenshots in `assets/img/` and swap them into the "Take a look" section.
+- [x] **Screenshots**: `assets/img/shot-*.webp`, gameplay cropped from the game repo's 6.7-inch store screenshots.
 - [x] **Privacy policy**: updated 30 Sep 2026 for Google AdMob ads (consent form, tracking prompt, ad partners).
       Keep it in step with the game's Privacy card and `docs/privacy-policy.md` / `docs/PRIVACY.md` in the game repo.
 - [ ] **App Privacy in App Store Connect**: with ads it is no longer "Data Not Collected"; answer it as
