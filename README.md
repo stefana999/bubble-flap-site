@@ -34,10 +34,11 @@ Preview locally: `python3 -m http.server 8000`, then open http://localhost:8000
 
 Every spot to change is marked with a `LAUNCH:` comment in the HTML.
 
-- [ ] **App Store button**: replace both "Coming soon" buttons in `index.html` with Apple's official
-      "Download on the App Store" badge, from https://developer.apple.com/app-store/marketing/guidelines/.
-      Link it to `https://apps.apple.com/app/id<APP_ID>`.
-- [ ] **Smart App Banner**: uncomment `<meta name="apple-itunes-app" content="app-id=…">` in `index.html`.
+- [x] **App Store button**: both buttons in `index.html` link to `https://apps.apple.com/app/bubble-dare/id6816718972`
+      (no country code, so visitors land in their own storefront). Optional: swap in Apple's official
+      "Download on the App Store" badge from https://developer.apple.com/app-store/marketing/guidelines/,
+      saved under `assets/img/` (nothing is loaded from third parties).
+- [x] **Smart App Banner**: `<meta name="apple-itunes-app" content="app-id=6816718972">` in `index.html`.
 - [ ] **Screenshots**: put three landscape screenshots in `assets/img/` and swap them into the "Take a look" section.
 - [x] **Privacy policy**: updated 30 Sep 2026 for Google AdMob ads (consent form, tracking prompt, ad partners).
       Keep it in step with the game's Privacy card and `docs/privacy-policy.md` / `docs/PRIVACY.md` in the game repo.
