@@ -54,9 +54,10 @@ Every spot to change is marked with a `LAUNCH:` comment in the HTML.
 
 ## The Christmas page
 
-`/christmas/` shows what the season adds to the game and holds the press kit. It's the
-"supplemental materials" link in the App Store featuring nomination and the link for
-December posts.
+`/christmas/` is for players: what the season adds to the game, the Yule Lads calendar,
+the screenshots and the App Store button. It's also the "supplemental materials" link in
+the App Store featuring nomination, so a small link at the bottom offers editors and
+writers the full-size screenshots and art as one ZIP. It's the link for December posts too.
 
 Everything on it comes from the game repo's Christmas custom product page renders
 (`store/custom-product-pages/christmas/` in bubble-flap), which are rendered from the live
