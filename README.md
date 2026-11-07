@@ -11,11 +11,13 @@ Plain HTML and CSS: no build step, no JavaScript, no web fonts, no cookies, and 
 
 ```
 /                 index.html      landing page
+/christmas/       christmas/      the Christmas season (1 Dec to 6 Jan) and its press kit
 /support/         support/        support page and FAQ (App Store "Support URL")
 /privacy/         privacy/        privacy policy (App Store "Privacy Policy URL")
 /404.html                         GitHub Pages "not found" page
 /app-ads.txt                      authorised ad sellers (AdMob); Marketing URL must be this site
 /assets/css/site.css              all styles (light and dark mode)
+/assets/css/christmas.css         the Christmas page only, on top of site.css
 /assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png, shot-*.webp
 CNAME, .nojekyll, robots.txt, sitemap.xml
 ```
@@ -49,3 +51,28 @@ Every spot to change is marked with a `LAUNCH:` comment in the HTML.
 - [ ] **Support FAQ**: check the answers against the final game, e.g. the minimum iOS version.
 - [ ] **Sitemap**: update `lastmod` dates in `sitemap.xml` when pages change.
 - [ ] **Link previews**: after deploying, check them with a message to yourself in iMessage or Slack.
+
+## The Christmas page
+
+`/christmas/` shows what the season adds to the game and holds the press kit. It's the
+"supplemental materials" link in the App Store featuring nomination and the link for
+December posts.
+
+Everything on it comes from the game repo's Christmas custom product page renders
+(`store/custom-product-pages/christmas/` in bubble-flap), which are rendered from the live
+build:
+
+- `assets/img/christmas/hero-*.webp` and `og-christmas.png`: the header art
+  (`creative-assets/header-3840x1646.png`).
+- `assets/img/christmas/shot-*.webp`: the gameplay inside the 6.3" screenshots, 1080 px wide.
+- `christmas/press/`: the full-size iPhone 6.3" and iPad 13" screenshots, the header art,
+  the app icon, a `README.txt` fact sheet, and all of them in
+  `bubble-dare-christmas-press-kit.zip`.
+
+The Yule Lads calendar on the page follows the game's `Seasons.yule_lads_on` (none until
+12 Dec, one more a day to 13 on Christmas Eve, one fewer a day to none on 6 Jan), and the
+gold baubles are the special dailies in `Daily.SPECIAL` (21, 24, 25, 26 Dec and 1 Jan).
+If either changes in the game, change the page.
+
+Next year: re-render the screenshots from the build that's live then, and replace the
+files above with the same names.
