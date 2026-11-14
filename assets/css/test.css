@@ -1,0 +1,116 @@
+/* Bubble Dare — the Android closed-test page (/test/ and /test/en/), on top of site.css */
+
+.test { --p1: var(--accent); --p2: var(--bubble-a); --p3: var(--bubble-b); --p4: var(--bubble-c); --p5: var(--sun); --p6: var(--bird-body); }
+
+/* Language switch in the header */
+.lang {
+  font-weight: 700; font-size: 0.9rem; text-decoration: none;
+  border: 2px solid var(--line); border-radius: 999px; padding: 6px 12px;
+}
+.lang:hover { background: var(--surface-2); }
+
+/* ---------- Hero ---------- */
+.t-hero {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--bg) 100%);
+  padding-block: 56px 40px; overflow: hidden;
+}
+.t-hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+@media (max-width: 860px) { .t-hero .wrap { grid-template-columns: 1fr; } }
+.t-hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.6rem); }
+.t-hero .lead { max-width: 40ch; }
+.t-hero .sign { font-family: var(--font); font-weight: 700; color: var(--ink-soft); margin-top: -4px; }
+
+.t-art { position: relative; padding: 18px; }
+.t-art .device { transform: rotate(-3deg); }
+.t-art .bub {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.95) 0 14%, transparent 15%),
+              radial-gradient(circle, color-mix(in srgb, var(--c) 18%, transparent) 55%, var(--c) 100%);
+  animation: floaty 5s ease-in-out infinite;
+}
+.t-art .b1 { --c: var(--bubble-a); width: 74px; height: 74px; top: -8px; right: 6%; }
+.t-art .b2 { --c: var(--bubble-b); width: 46px; height: 46px; bottom: 2px; left: 4%; animation-delay: -2s; }
+.t-art .b3 { --c: var(--bubble-c); width: 30px; height: 30px; top: 30%; left: -6px; animation-delay: -3.4s; }
+@media (prefers-reduced-motion: reduce) { .t-art .bub { animation: none; } }
+
+/* ---------- Three facts ---------- */
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+.fact { padding: 20px 22px; }
+.fact b {
+  display: block; font-family: var(--font); font-weight: 800; font-size: 1.9rem; line-height: 1.1;
+  color: var(--accent); margin-bottom: 6px;
+}
+.fact p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+
+.t-section { padding-block: 64px; }
+.t-section.band { background: var(--surface-2); }
+
+/* ---------- Join steps ---------- */
+.join .step .btn { margin-top: 16px; font-size: 0.95rem; padding: 10px 16px; align-self: flex-start; }
+.join .step { display: flex; flex-direction: column; }
+.join .step p { flex: 1; }
+.tip {
+  display: flex; gap: 12px; align-items: flex-start;
+  margin-top: 22px; padding: 16px 18px; border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--sun) 28%, var(--surface)); border: 1px solid color-mix(in srgb, var(--sun) 60%, var(--line));
+}
+@media (prefers-color-scheme: dark) {
+  .tip { background: color-mix(in srgb, var(--sun) 12%, var(--surface)); border-color: color-mix(in srgb, var(--sun) 35%, var(--line)); }
+}
+.tip strong { font-family: var(--font); }
+.tip p { margin: 0; }
+
+/* ---------- The 14-day strip ---------- */
+.days {
+  list-style: none; margin: 0 0 28px; padding: 0;
+  display: grid; grid-template-columns: repeat(14, 1fr); gap: 6px;
+}
+.days li {
+  aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--font); font-weight: 800; font-size: clamp(0.7rem, 1.6vw, 1rem); color: var(--ink);
+  background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.9) 0 12%, transparent 13%),
+              radial-gradient(circle, color-mix(in srgb, var(--c) 22%, var(--surface)) 55%, var(--c) 100%);
+}
+.days .p1 { --c: var(--p1); } .days .p2 { --c: var(--p2); } .days .p3 { --c: var(--p3); }
+.days .p4 { --c: var(--p4); } .days .p5 { --c: var(--p5); } .days .p6 { --c: var(--p6); }
+
+.plan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; list-style: none; margin: 0; padding: 0; }
+@media (max-width: 960px) { .plan { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .plan { grid-template-columns: 1fr; } }
+.plan li { border-top: 6px solid var(--c); }
+.plan .p1 { --c: var(--p1); } .plan .p2 { --c: var(--p2); } .plan .p3 { --c: var(--p3); }
+.plan .p4 { --c: var(--p4); } .plan .p5 { --c: var(--p5); } .plan .p6 { --c: var(--p6); }
+.plan .when {
+  display: inline-block; font-family: var(--font); font-weight: 800; font-size: 0.82rem;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;
+}
+.plan h3 { margin-bottom: 6px; }
+.plan p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+
+/* ---------- Checklist ---------- */
+.checks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 760px) { .checks { grid-template-columns: 1fr; } }
+.checks h3 { font-size: 1.1rem; }
+.checks ul { list-style: none; margin: 0; padding: 0; }
+.checks li + li { margin-top: 8px; }
+.checks label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; color: var(--ink-soft); }
+.checks input {
+  flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--accent);
+}
+.checks input:checked + span { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--ink-soft) 50%, transparent); }
+.checks .warn { color: var(--ink); font-weight: 600; }
+
+/* ---------- Feedback ---------- */
+.ways { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .ways { grid-template-columns: 1fr; } }
+.ways .card { display: flex; flex-direction: column; }
+.ways .card p { flex: 1; color: var(--ink-soft); }
+.ways .card .btn { align-self: flex-start; }
+.ask { margin-top: 18px; color: var(--ink-soft); }
+.ask ol { margin: 8px 0 0; padding-left: 1.3em; }
+
+.thanks { text-align: center; padding-block: 56px 72px; background: linear-gradient(180deg, var(--bg), var(--sky-top)); }
+.thanks p { font-family: var(--font); font-weight: 700; font-size: 1.3rem; margin: 0; }
+
+.test .faq { max-width: 760px; }
