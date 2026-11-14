@@ -13,11 +13,13 @@ Plain HTML and CSS: no build step, no JavaScript, no web fonts, no cookies, and 
 /                 index.html      landing page
 /christmas/       christmas/      the Christmas season (1 Dec to 6 Jan) and its press kit
 /support/         support/        support page and FAQ (App Store "Support URL")
+/test/            test/           Android closed-test instructions for testers, Icelandic (/test/) and English (/test/en/); not indexed
 /privacy/         privacy/        privacy policy (App Store "Privacy Policy URL")
 /404.html                         GitHub Pages "not found" page
 /app-ads.txt                      authorised ad sellers (AdMob); Marketing URL must be this site
 /assets/css/site.css              all styles (light and dark mode)
 /assets/css/christmas.css         the Christmas page only, on top of site.css
+/assets/css/test.css              the test page only, on top of site.css
 /assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png, shot-*.webp
 CNAME, .nojekyll, robots.txt, sitemap.xml
 ```
@@ -76,3 +78,20 @@ If either changes in the game, change the page.
 
 Next year: re-render the screenshots from the build that's live then, and replace the
 files above with the same names.
+
+## The test page
+
+`/test/` (Icelandic) and `/test/en/` (English) tell friends how to join the Android
+closed test: Google requires at least 12 testers opted in for the last 14 days in a row
+before a new personal account can apply for production access. The page walks them
+through joining, a 14-day plan that covers every part of the game, a checklist and
+two ways to send feedback (private feedback in Google Play, or a pre-filled email).
+
+It is kept out of search engines on purpose: `<meta name="robots" content="noindex, nofollow, noarchive">`,
+no link from the other pages, and no entry in `sitemap.xml`. Don't add it to `robots.txt`:
+a crawler that is blocked from the page can't read its noindex tag.
+
+Testers join through the Google Group bubble-dare-testers@googlegroups.com
+(https://groups.google.com/g/bubble-dare-testers), which is linked to the closed track in Play Console.
+When the game is live on Google Play, take the page down or replace it with a short
+"thanks, it's out" note.
