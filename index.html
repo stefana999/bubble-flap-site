@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bubble Dare — pop bubbles, dare the swirl</title>
-  <meta name="description" content="Bubble Dare is a one-tap flying game for iPhone and iPad. Pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.">
+  <meta name="description" content="Bubble Dare is a one-tap flying game for iPhone and iPad. Pop soap bubbles to keep flying, dare the swirl for big rewards, fly through four worlds, gather a flock and send a postcard home from every one.">
   <link rel="canonical" href="https://bubbledare.mothlark.com/">
-  <meta name="theme-color" content="#bfe4ff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0e1834" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#434276" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#434276" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bubble Dare">
   <meta property="og:title" content="Bubble Dare — pop bubbles, dare the swirl">
-  <meta property="og:description" content="A one-tap flying game for iPhone and iPad. Pop bubbles, break free, dodge the wires.">
+  <meta property="og:description" content="A one-tap flying game for iPhone and iPad. Pop bubbles, dare the swirl, and fly from the suburb to Geyser Valley.">
   <meta property="og:url" content="https://bubbledare.mothlark.com/">
   <meta property="og:image" content="https://bubbledare.mothlark.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -26,6 +26,7 @@
   <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
 
   <script type="application/ld+json">
   {
@@ -33,7 +34,7 @@
     "@type": "VideoGame",
     "name": "Bubble Dare",
     "url": "https://bubbledare.mothlark.com/",
-    "description": "A one-tap flying game: pop soap bubbles for energy, burst out of trapping bubbles for big rewards, and dodge live wires.",
+    "description": "A one-tap flying game: pop soap bubbles to keep flying, dare the swirl for big rewards, and fly through the suburb, Downtown, the Desert and Geyser Valley.",
     "gamePlatform": ["iPhone", "iPad"],
     "operatingSystem": "iOS, iPadOS",
     "installUrl": "https://apps.apple.com/app/bubble-dare/id6816718972",
@@ -42,7 +43,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home">
   <a class="skip" href="#main">Skip to content</a>
 
   <!-- Shared SVG sprite: bird and bubble art used across the page -->
@@ -87,90 +88,37 @@
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#how" class="hide-sm">How to play</a>
-        <a href="#features" class="hide-sm">Features</a>
+        <a href="#worlds" class="hide-sm">Worlds</a>
+        <a href="#more">Features</a>
         <a href="/support/">Support</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- ================= HERO ================= -->
-    <section class="hero" aria-labelledby="hero-title" style="padding-bottom:0">
-      <div class="wrap hero-grid">
-        <div>
-          <span class="eyebrow">A one-tap flying game</span>
-          <h1 id="hero-title">Keep flying.<br><span class="pop">Pop bubbles.</span></h1>
-          <p class="lead">You're a little bird out over the suburb. Burst soap bubbles for energy, break free of the ones that trap you, and steer clear of the live wires.</p>
-          <div class="cta-row">
-            <!-- Optional: swap in Apple's official "Download on the App Store" badge
-                 (developer.apple.com/app-store/marketing/guidelines), saved under assets/img/. -->
-            <a class="btn btn-primary" id="appstore" href="https://apps.apple.com/app/bubble-dare/id6816718972">
-              <span class="stack"><small>Download on the</small>App Store</span>
-            </a>
-            <a class="btn btn-ghost" href="#how">How to play</a>
-          </div>
-          <p class="platforms">For iPhone and iPad · Plays in landscape</p>
+    <!-- ================= HERO: the street at golden hour, from the game ================= -->
+    <section class="hm-hero" aria-labelledby="hero-title">
+      <div class="wrap hm-hero-text">
+        <p class="hm-kicker">A one-tap flying game for iPhone and iPad</p>
+        <h1 id="hero-title">Pop bubbles.<br><span class="pop">Dare the swirl.</span></h1>
+        <p class="hm-lead">You're a little bird who can't stop flying. Pop soap bubbles to keep going, dare the swirl for big rewards, and fly from the suburb all the way to Geyser Valley.</p>
+        <div class="cta-row">
+          <!-- Optional: swap in Apple's official "Download on the App Store" badge
+               (developer.apple.com/app-store/marketing/guidelines), saved under assets/img/. -->
+          <a class="btn btn-primary" id="appstore" href="https://apps.apple.com/app/bubble-dare/id6816718972">
+            <span class="stack"><small>Download on the</small>App Store</span>
+          </a>
+          <a class="btn hm-btn-ghost" href="#how">How to play</a>
         </div>
-
-        <div class="hero-art">
-          <svg class="scene" viewBox="0 0 600 440" role="img" aria-label="A small green bird flying among floating soap bubbles in a morning sky">
-            <circle cx="120" cy="90" r="54" style="fill:var(--sun)" opacity="0.85"/>
-            <g class="float d1"><use href="#bubble" x="340" y="10" width="210" height="210"/></g>
-            <g class="float d1">
-              <svg x="395" y="72" width="110" height="92" viewBox="0 0 120 100"><use href="#bird"/></svg>
-            </g>
-            <g class="float d2"><use href="#bubble" x="200" y="40" width="70" height="70"/></g>
-            <g class="float d3"><use href="#bubble" x="470" y="250" width="110" height="110"/></g>
-            <g class="float"><use href="#bubble" x="20" y="250" width="72" height="72"/></g>
-            <g class="float d2"><use href="#bubble" x="360" y="330" width="52" height="52"/></g>
-            <g class="float d3"><use href="#bubble" x="290" y="150" width="36" height="36"/></g>
-            <!-- pop burst -->
-            <g transform="translate(110 205)" stroke="#ff9fd9" stroke-width="4" stroke-linecap="round">
-              <line x1="0" y1="-34" x2="0" y2="-20"/>
-              <line x1="30" y1="-17" x2="17" y2="-10"/>
-              <line x1="30" y1="17" x2="17" y2="10"/>
-              <line x1="0" y1="34" x2="0" y2="20"/>
-              <line x1="-30" y1="17" x2="-17" y2="10"/>
-              <line x1="-30" y1="-17" x2="-17" y2="-10"/>
-            </g>
-            <text x="110" y="212" text-anchor="middle" font-family="ui-rounded, system-ui, sans-serif" font-weight="800" font-size="22" style="fill:var(--accent)">+5</text>
-            <!-- main bird -->
-            <g class="bird">
-              <svg x="150" y="190" width="230" height="192" viewBox="0 0 120 100"><use href="#bird"/></svg>
-            </g>
-          </svg>
-        </div>
+        <p class="hm-platforms">Free on iPhone and iPad · Plays in landscape</p>
       </div>
-
-      <!-- Suburban skyline with poles and wires -->
-      <svg class="ground" viewBox="0 0 1200 190" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="width:100%;height:190px">
-        <path d="M0 120 C150 80 300 90 450 110 C620 132 780 80 950 95 C1060 104 1140 96 1200 90 L1200 190 L0 190 Z" style="fill:var(--hill-far)"/>
-        <g>
-          <g transform="translate(70 104)"><rect width="70" height="50" style="fill:var(--house)"/><path d="M-8 2 L35 -30 L78 2 Z" style="fill:var(--roof)"/><rect x="12" y="14" width="16" height="14" rx="2" fill="#9fd3ff"/><rect x="42" y="22" width="16" height="28" rx="2" style="fill:var(--roof)"/></g>
-          <g transform="translate(300 112)"><rect width="90" height="44" style="fill:var(--house)"/><path d="M-8 2 L45 -26 L98 2 Z" style="fill:var(--roof)"/><rect x="14" y="12" width="18" height="14" rx="2" fill="#9fd3ff"/><rect x="58" y="12" width="18" height="14" rx="2" fill="#9fd3ff"/></g>
-          <g transform="translate(560 100)"><rect width="64" height="56" style="fill:var(--house)"/><path d="M-8 2 L32 -32 L72 2 Z" style="fill:var(--roof)"/><rect x="22" y="26" width="18" height="30" rx="2" style="fill:var(--roof)"/></g>
-          <g transform="translate(820 108)"><rect width="84" height="48" style="fill:var(--house)"/><path d="M-8 2 L42 -28 L92 2 Z" style="fill:var(--roof)"/><rect x="12" y="14" width="18" height="14" rx="2" fill="#9fd3ff"/><rect x="50" y="20" width="16" height="28" rx="2" style="fill:var(--roof)"/></g>
-          <g transform="translate(1060 104)"><rect width="70" height="52" style="fill:var(--house)"/><path d="M-8 2 L35 -30 L78 2 Z" style="fill:var(--roof)"/><rect x="26" y="14" width="18" height="14" rx="2" fill="#9fd3ff"/></g>
-        </g>
-        <path d="M0 160 C200 140 380 150 600 156 C820 162 1000 142 1200 148 L1200 190 L0 190 Z" style="fill:var(--hill-near)"/>
-        <!-- poles -->
-        <g style="fill:var(--pole)">
-          <rect x="196" y="36" width="8" height="130"/><rect x="176" y="40" width="48" height="6" rx="3"/>
-          <rect x="596" y="36" width="8" height="130"/><rect x="576" y="40" width="48" height="6" rx="3"/>
-          <rect x="996" y="36" width="8" height="130"/><rect x="976" y="40" width="48" height="6" rx="3"/>
-        </g>
-        <!-- wires -->
-        <g fill="none" stroke-width="2.5" style="stroke:var(--wire)">
-          <path d="M-200 43 Q0 78 180 43"/><path d="M-180 43 Q20 84 220 43"/>
-          <path d="M180 43 Q390 80 580 43"/><path d="M220 43 Q410 86 620 43"/>
-          <path d="M580 43 Q790 80 980 43"/><path d="M620 43 Q810 86 1020 43"/>
-          <path d="M980 43 Q1190 80 1380 43"/><path d="M1020 43 Q1210 86 1420 43"/>
-        </g>
-        <!-- live wire spark -->
-        <g class="spark" transform="translate(790 62)">
-          <path d="M0 -16 L5 -4 L16 -6 L7 3 L12 15 L0 7 L-12 15 L-7 3 L-16 -6 L-5 -4 Z" style="fill:var(--spark)"/>
-        </g>
-      </svg>
+      <!-- Rendered by the game itself (tools/creative_shots.gd in the game repo): the street at
+           golden hour with three birds dressed up, the same art as the App Store page's header
+           (store/creative-assets/header-1.2-3840x1646.png). -->
+      <picture class="hm-street">
+        <source type="image/webp" srcset="/assets/img/home/hero-1280.webp 1280w, /assets/img/home/hero-2400.webp 2400w" sizes="100vw">
+        <img src="/assets/img/home/hero-2400.webp" width="2400" height="1029" alt="Three dressed-up birds flying over the suburb at golden hour: a pink bird with a flower, a red bird in a crown and sunglasses, and a puffin in a woolly hat, under a wire lit with gold bubbles">
+      </picture>
     </section>
 
     <!-- ================= HOW TO PLAY ================= -->
@@ -178,7 +126,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2 id="how-title">How to play</h2>
-          <p>One finger, four rules. Easy to pick up — and you'll keep coming back for one more flight.</p>
+          <p>One finger, four rules. Easy to pick up, and you'll keep coming back for one more flight.</p>
         </div>
         <div class="steps">
           <article class="card step">
@@ -202,8 +150,8 @@
               <use href="#bubble" x="2" y="2" width="60" height="60"/>
               <svg x="16" y="20" width="32" height="27" viewBox="0 0 120 100"><use href="#bird"/></svg>
             </svg>
-            <h3>Break free</h3>
-            <p>Some bubbles pull you in. Tap fast to pop them from inside — the longer you dare to stay, the bigger the reward.</p>
+            <h3>Dare the swirl</h3>
+            <p>Swirl bubbles swallow you. Stay inside and the reward climbs from ×1.5 to ×8, but every tap to break out costs air.</p>
           </article>
           <article class="card step">
             <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -215,47 +163,136 @@
             <p>Poles are fine to fly past. Live, sparking wires are not.</p>
           </article>
         </div>
+
+        <div class="shots two">
+          <figure>
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-trapped.webp" width="1280" height="591" loading="lazy" decoding="async" alt="A red bird in a crown and sunglasses trapped inside a swirl bubble over the suburb, with the reward multiplier at ×3 and TAP! prompts on both sides"></div></div>
+            <figcaption class="shot-caption">Tap your way out of a swirl before the air runs out</figcaption>
+          </figure>
+          <figure>
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-night.webp" width="1280" height="591" loading="lazy" decoding="async" alt="An owl in a wizard hat flying at night under street lamps, past a glowing gold bubble and a sparking live wire"></div></div>
+            <figcaption class="shot-caption">Fly from noon, through golden hour, into the night</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORLDS ================= -->
+    <!-- Gameplay rendered from the live build with tools/shots.gd in the game repo
+         (SHOT=lane; SHOT=play with SHOT_FROM=downtown, desert; SHOT=geysers), 1280 px wide. -->
+    <section id="worlds" class="band" aria-labelledby="worlds-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="worlds-title">A new world every dawn</h2>
+          <p>Every run flies on from noon through golden hour into night. Make it to dawn and the next world rolls in, with its own sky, its own street and its own ways to end your run.</p>
+        </div>
+        <div class="hm-worlds">
+          <figure class="hm-world">
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-suburb.webp" width="1280" height="591" loading="lazy" decoding="async" alt="The green bird flying low over pastel suburban houses, under a power line lit with a trail of gold"></div></div>
+            <figcaption><h3>The Suburb</h3><p>Rooftops, gardens and power lines that buzz, spark and go live. Gulls up high, ravens on the poles after dark.</p></figcaption>
+          </figure>
+          <figure class="hm-world">
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-downtown.webp" width="1280" height="591" loading="lazy" decoding="async" alt="A toucan in headphones and sunglasses flying past downtown buildings with a pizza place and a night café, under tram wires"></div></div>
+            <figcaption><h3>Downtown</h3><p>Steam vents, pigeon flocks, tram wires and a busker blowing giant bubbles.</p></figcaption>
+          </figure>
+          <figure class="hm-world">
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-desert.webp" width="1280" height="591" loading="lazy" decoding="async" alt="A red bird in a crown flying over the desert, past adobe houses, cacti and red mesas"></div></div>
+            <figcaption><h3>The Desert</h3><p>Tumbleweeds, sandstorms, vultures and a little bubble train.</p></figcaption>
+          </figure>
+          <figure class="hm-world">
+            <div class="device"><div class="screen"><img src="/assets/img/home/play-geysers.webp" width="1280" height="591" loading="lazy" decoding="async" alt="A puffin in a woolly hat flying over Geyser Valley, past turf houses, hot pools, a pylon and a volcano"></div></div>
+            <figcaption><h3>Geyser Valley</h3><p>Geysers that throw you skyward and volcanoes that fill the sky with ash.</p></figcaption>
+          </figure>
+        </div>
+
+        <div class="hm-row">
+          <div class="device"><div class="screen"><img src="/assets/img/home/ui-departures.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The Departures board: four gates for the Suburb, Downtown, the Desert and Geyser Valley. The Desert is chosen as the start, and Geyser Valley is still locked"></div></div>
+          <div class="hm-copy">
+            <h3>Start where you've been</h3>
+            <p>Reach a world in a run and it opens as a place to start. Pick it on the Departures board and your next run flies the loop from there, so the far worlds are never far away.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= FEATURES ================= -->
-    <section id="features" class="band" aria-labelledby="features-title">
+    <!-- The flock is rendered with tools/shots.gd (SHOT=dusk SHOT_FLOCK=6); the other
+         pictures are screen captures from an iPhone, version 1.3, 1280 px wide. -->
+    <section id="features" aria-labelledby="features-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="features-title">Small game, big sky</h2>
+          <h2 id="features-title">Something to chase every day</h2>
+          <p>Every run counts towards something: a bigger flock, a better multiplier, the next postcard or that hat you've had your eye on.</p>
         </div>
-        <div class="features">
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>One-tap controls</h3><p>Tap to fly — that's the whole control scheme. Easy to learn, hard to master.</p></div></div>
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Risk-and-reward bubbles</h3><p>Stay trapped a little longer for a bigger payout, if you can tap your way out in time.</p></div></div>
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>A sunny suburb</h3><p>Fly over rooftops, gardens and power lines in a bright neighbourhood sky.</p></div></div>
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Noon to night</h3><p>The sky turns from midday to dusk to starry night the further you fly.</p></div></div>
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Made for iPhone and iPad</h3><p>Plays in landscape and fits every screen size.</p></div></div>
-          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Free, no accounts</h3><p>Free to play, no sign-up. Your progress stays on your device.</p></div></div>
+
+        <div class="hm-row">
+          <div class="device"><div class="screen"><img src="/assets/img/home/play-flock.webp" width="1280" height="591" loading="lazy" decoding="async" alt="A toucan in headphones leading a flock of small birds over the suburb at dusk"></div></div>
+          <div class="hm-copy">
+            <h3>Gather a flock</h3>
+            <p>Some bubbles hold a bird. Pop one and it follows you, up to six in a V with you at its point. They fly your path, dart for bubbles you missed, and a full flock doubles your flying score. Lose one and your run carries on.</p>
+          </div>
+        </div>
+
+        <div class="hm-row flip">
+          <div class="device"><div class="screen"><img src="/assets/img/home/ui-daily.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The Daily Bubble, a newspaper page for Thunder Thursday: today's twist is Feather Shield, the run starts at dusk, and there are three tries to fly"></div></div>
+          <div class="hm-copy">
+            <h3>The Daily Bubble</h3>
+            <p>One street a day, the same for every player, with its own twist. You get three tries and your best one counts. Keep a streak going for bonus pearls.</p>
+          </div>
+        </div>
+
+        <div class="hm-row">
+          <div class="device"><div class="screen"><img src="/assets/img/home/ui-missions.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The missions board with three notes pinned to it: fly past four spraying sprinklers dry, score 19,150 in one run, and fly 6,000 metres in total, under a ×10 rosette"></div></div>
+          <div class="hm-copy">
+            <h3>Missions</h3>
+            <p>Three missions at a time. Finish them to raise your score multiplier, all the way to ×10. Each kind asks for a little more every time you finish one.</p>
+          </div>
+        </div>
+
+        <div class="hm-row flip">
+          <div class="device"><div class="screen"><img src="/assets/img/home/ui-postcards.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The postcard album open at its Gold tab, with gold-framed prints of the Suburb by day, at golden hour and at night, and Downtown by day"></div></div>
+          <div class="hm-copy">
+            <h3>Send a postcard home</h3>
+            <p>Every world at every time of day is a postcard, with rare moments to find besides. Each card shows your bird in the outfit it wore, signed and postmarked. Pop 10 in a row in a place to earn its gold print.</p>
+          </div>
+        </div>
+
+        <div class="hm-row">
+          <div class="device"><div class="screen"><img src="/assets/img/home/ui-shop.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The shop's Today tab: a bird trying on a propeller cap at 25% off, next to confetti, a hummingbird and a crown"></div></div>
+          <div class="hm-copy">
+            <h3>Dress up your bird</h3>
+            <p>Over 100 looks: birds, hats, glasses, capes and scarves, trails, pop effects and whole streets. Try anything on for free, then buy it with pearls you earn as you play. New picks every day, one of them on sale. Looks never change how the game plays.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= SCREENSHOTS ================= -->
-    <section id="screens" aria-labelledby="screens-title">
+    <!-- ================= SEASONS ================= -->
+    <section class="band hm-seasons" aria-labelledby="seasons-title">
+      <div class="wrap">
+        <div class="hm-season-card">
+          <div>
+            <h2 id="seasons-title">Dressed for the season</h2>
+            <p>The game dresses up for Halloween and Christmas, and prints its own edition of every postcard for each. No update to download: open the game and the season is there.</p>
+          </div>
+          <a class="btn btn-primary" href="/christmas/">See Christmas in the game</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE SMALL PRINT ================= -->
+    <section id="more" aria-labelledby="more-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="screens-title">Take a look</h2>
+          <h2 id="more-title">Small game, big sky</h2>
         </div>
-        <!-- Gameplay cropped from the 6.7-inch App Store screenshots in the game repo
-             (store/screenshots/6.7-inch: 04-lane, 01-trapped, 05-dusk), 1080 px wide. -->
-        <div class="shots">
-          <figure style="margin:0">
-            <div class="device"><div class="screen"><img src="/assets/img/shot-pop.webp" width="1080" height="497" loading="lazy" decoding="async" alt="A green bird flying along a golden trail of popped bubbles over the suburb, with the energy bar full"></div></div>
-            <figcaption class="shot-caption">Pop bubbles to refill your energy</figcaption>
-          </figure>
-          <figure style="margin:0">
-            <div class="device"><div class="screen"><img src="/assets/img/shot-trapped.webp" width="1080" height="497" loading="lazy" decoding="async" alt="The bird trapped inside a swirling bubble, with TAP! prompts on both sides and a reward multiplier above"></div></div>
-            <figcaption class="shot-caption">Burst out of a trapping bubble</figcaption>
-          </figure>
-          <figure style="margin:0">
-            <div class="device"><div class="screen"><img src="/assets/img/shot-wires.webp" width="1080" height="497" loading="lazy" decoding="async" alt="The bird weaving between power lines and a garden sprinkler at dusk"></div></div>
-            <figcaption class="shot-caption">Dodge the live wires</figcaption>
-          </figure>
+        <div class="features">
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>One-tap controls</h3><p>Tap to fly. That's the whole control scheme: easy to learn, hard to master.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>A gentle start</h3><p>New players meet the street's dangers a few at a time over their first runs.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Feel every pop</h3><p>Haptics you feel through every pop, crack and escape.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Made for iPhone and iPad</h3><p>Plays in landscape and fits every screen size.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Free, no accounts</h3><p>Free to play, no sign-up. Your progress stays on your device.</p></div></div>
+          <div class="feature"><span class="dot" aria-hidden="true"></span><div><h3>Ads on your terms</h3><p>Watching an ad for a Second Wind or double pearls is always your choice. Remove Ads is in the shop.</p></div></div>
         </div>
       </div>
     </section>
@@ -263,9 +300,9 @@
     <!-- ================= FINAL CTA ================= -->
     <section class="final" aria-labelledby="final-title">
       <div class="wrap">
-        <svg viewBox="0 0 120 100" width="96" height="80" aria-hidden="true" style="margin:0 auto 12px" class="bird"><use href="#bird"/></svg>
         <h2 id="final-title">Ready to take off?</h2>
         <p class="lead center">Bubble Dare is out now on iPhone and iPad.</p>
+        <div class="hm-title-shot device"><div class="screen"><img src="/assets/img/home/ui-title.webp" width="1280" height="589" loading="lazy" decoding="async" alt="The title screen: a bird in a beanie by the Play ticket, with the Nest, Daily, Missions, Postcards, Shop and the Departures board around it"></div></div>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://apps.apple.com/app/bubble-dare/id6816718972"><span class="stack"><small>Download on the</small>App Store</span></a>
           <a class="btn btn-ghost" href="/support/">Questions? Get support</a>

@@ -1,0 +1,101 @@
+/* Bubble Dare — the home page, on top of site.css.
+   The hero is always the game's street at golden hour, in light mode too (like the
+   Christmas page's night street); the rest follows the site's light and dark colours. */
+
+.home {
+  --dusk-0: #3b3a6b;     /* the top of the hero render's sky */
+  --dusk: #4a4478;
+  --dusk-road: #69728a;  /* the road at the bottom of the render */
+  --cream: #fff6e8;
+  --gold: #ffcf57;       /* pearl gold, as in the store screenshots' captions */
+}
+
+/* ---------- Header over the dusk hero ---------- */
+.home .site-header { color: var(--cream); }
+.home .site-header .nav a { color: var(--cream); }
+.home .site-header .nav a:hover { background: rgb(255 255 255 / 0.12); }
+
+/* ---------- Hero ---------- */
+.hm-hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: 120px 0 0;
+  color: var(--cream);
+  background: linear-gradient(180deg, var(--dusk-0) 0%, var(--dusk) 100%);
+}
+.hm-hero-text { position: relative; z-index: 3; padding-bottom: 8px; }
+.hm-kicker {
+  font-family: var(--font); font-weight: 700; font-size: 1.05rem;
+  color: var(--gold); margin: 0 0 10px;
+}
+.hm-hero h1 {
+  font-size: clamp(2.8rem, 8.5vw, 5.6rem); line-height: 0.98; letter-spacing: -0.025em;
+  margin-bottom: 0.3em;
+}
+.hm-hero h1 .pop { color: var(--gold); }
+.hm-lead { font-size: 1.2rem; max-width: 46ch; color: rgb(255 246 232 / 0.84); }
+.hm-hero .cta-row { margin-top: 22px; }
+.hm-hero .btn-primary { box-shadow: 0 8px 22px rgb(0 0 0 / 0.3); }
+.hm-btn-ghost { border-color: rgb(255 246 232 / 0.4); color: var(--cream); }
+.hm-btn-ghost:hover { background: rgb(255 255 255 / 0.1); }
+.hm-platforms { margin: 14px 0 0; font-size: 0.95rem; color: rgb(255 246 232 / 0.72); }
+@media (max-width: 860px) {
+  .hm-hero .cta-row { justify-content: flex-start; }
+}
+
+/* The street, rendered by the game. Its sky fades into the one the text sits on, and its
+   road runs into the page below. */
+.hm-street { display: block; position: relative; z-index: 2; margin-top: clamp(-110px, -8vw, -20px); }
+.hm-street img {
+  width: 100%; height: auto;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 24%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 24%);
+}
+/* on a phone the wide street would leave the birds tiny: show its middle, taller */
+@media (max-width: 640px) {
+  .hm-street img { height: 300px; object-fit: cover; object-position: 50% 60%; }
+}
+.hm-street::after {
+  content: ""; display: block; height: 48px;
+  background: linear-gradient(180deg, var(--dusk-road), var(--bg));
+}
+
+/* ---------- Screenshots in a row of two ---------- */
+.shots.two { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
+@media (max-width: 860px) { .shots.two { grid-template-columns: 1fr; } }
+.shots figure { margin: 0; }
+
+/* ---------- Worlds ---------- */
+.hm-worlds { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+@media (max-width: 700px) { .hm-worlds { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; } }
+.hm-world { margin: 0; }
+.hm-world figcaption { padding: 14px 6px 0; }
+.hm-world h3 { margin-bottom: 0.2em; }
+.hm-world p { margin: 0; color: var(--ink-soft); }
+
+/* ---------- A picture beside its words ---------- */
+.hm-row {
+  display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center;
+  margin-top: 56px;
+}
+.section-head + .hm-row { margin-top: 0; }
+.hm-row.flip { grid-template-columns: 1fr 1.35fr; }
+.hm-row.flip > .device { order: 2; }
+.hm-copy h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); font-weight: 800; }
+.hm-copy p { color: var(--ink-soft); font-size: 1.08rem; margin: 0; max-width: 44ch; }
+@media (max-width: 860px) {
+  .hm-row, .hm-row.flip { grid-template-columns: 1fr; gap: 18px; margin-top: 44px; max-width: 560px; margin-inline: auto; }
+  .hm-row.flip > .device { order: 0; }
+}
+
+/* ---------- Seasons ---------- */
+.hm-seasons { padding-block: 48px; }
+.hm-season-card {
+  display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; justify-content: space-between;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px 30px; box-shadow: var(--shadow);
+}
+.hm-season-card h2 { margin-bottom: 0.25em; }
+.hm-season-card p { margin: 0; color: var(--ink-soft); max-width: 56ch; }
+
+/* ---------- Final call to action ---------- */
+.hm-title-shot { max-width: 720px; margin: 28px auto 6px; }

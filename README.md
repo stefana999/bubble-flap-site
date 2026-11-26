@@ -18,9 +18,11 @@ Plain HTML and CSS: no build step, no JavaScript, no web fonts, no cookies, and 
 /404.html                         GitHub Pages "not found" page
 /app-ads.txt                      authorised ad sellers (AdMob); Marketing URL must be this site
 /assets/css/site.css              all styles (light and dark mode)
+/assets/css/home.css              the home page only, on top of site.css
 /assets/css/christmas.css         the Christmas page only, on top of site.css
 /assets/css/test.css              the test page only, on top of site.css
-/assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png, shot-*.webp
+/assets/img/                      icon.svg, favicon-32.png, apple-touch-icon.png, og-image.png, shot-*.webp (older gameplay; the test page uses shot-trapped)
+/assets/img/home/                 the home page's pictures (see "The home page" below)
 CNAME, .nojekyll, robots.txt, sitemap.xml
 ```
 
@@ -43,7 +45,7 @@ Every spot to change is marked with a `LAUNCH:` comment in the HTML.
       "Download on the App Store" badge from https://developer.apple.com/app-store/marketing/guidelines/,
       saved under `assets/img/` (nothing is loaded from third parties).
 - [x] **Smart App Banner**: `<meta name="apple-itunes-app" content="app-id=6816718972">` in `index.html`.
-- [x] **Screenshots**: `assets/img/shot-*.webp`, gameplay cropped from the game repo's 6.7-inch store screenshots.
+- [x] **Screenshots**: `assets/img/home/`, see "The home page" below.
 - [x] **Privacy policy**: updated 30 Sep 2026 for Google AdMob ads (consent form, tracking prompt, ad partners).
       Keep it in step with the game's Privacy card and `docs/privacy-policy.md` / `docs/PRIVACY.md` in the game repo.
 - [ ] **App Privacy in App Store Connect**: with ads it is no longer "Data Not Collected"; answer it as
@@ -53,6 +55,26 @@ Every spot to change is marked with a `LAUNCH:` comment in the HTML.
 - [ ] **Support FAQ**: check the answers against the final game, e.g. the minimum iOS version.
 - [ ] **Sitemap**: update `lastmod` dates in `sitemap.xml` when pages change.
 - [ ] **Link previews**: after deploying, check them with a message to yourself in iMessage or Slack.
+
+## The home page
+
+Updated 26 Nov 2026 for version 1.3: the four worlds, Departures, the flock, the
+Daily Bubble, missions, postcards and the shop. Every picture is the game's own:
+
+- `hero-1280.webp`, `hero-2400.webp` and `/assets/img/og-image.png` (1200 × 630, the
+  middle of it): the App Store header art, `store/creative-assets/header-1.2-3840x1646.png`
+  in the game repo. The hero is always this golden-hour street, in dark mode too.
+- `play-*.webp`: gameplay rendered from the build with `tools/shots.gd` at 1688 × 780,
+  saved 1280 px wide. `suburb` is `SHOT=lane`; `downtown` and `desert` are `SHOT=play`
+  with `SHOT_FROM=downtown` / `desert`; `geysers`, `trapped`, `night` are those shots;
+  `flock` is `SHOT=dusk SHOT_FLOCK=6`. Each wears an outfit (`SHOT_WEAR`) from the
+  store screenshots' set in `tools/store_shots.sh`; the suburb keeps the green bird.
+- `ui-*.webp`: screen captures from an iPhone (title, Departures, Daily, missions, the
+  postcard album's Gold tab, the shop's Today tab), 1280 px wide.
+
+When a new world or a new kind of thing comes into the game, add it here: a world gets
+a card in `#worlds` (a `SHOT=play SHOT_FROM=<world>` render), a feature a row in
+`#features`. Update the facts in the copy against the game's `docs/STORE_LISTING.md`.
 
 ## The Christmas page
 
